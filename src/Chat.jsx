@@ -3,7 +3,12 @@ import { io } from 'socket.io-client';
 import Cookies from 'js-cookie';
 import { useNavigate } from 'react-router-dom';
 
-const socket = io('http://localhost:3000', {
+// const socket = io('http://localhost:3000', {
+//   withCredentials: true,
+//   transports: ['websocket'],
+// });
+
+const socket = io('https://chat-express-production.up.railway.app', {
   withCredentials: true,
   transports: ['websocket'],
 });
