@@ -11,7 +11,7 @@ const Login = () => {
         e.preventDefault();
         const email = e.target[0].value;
         const password = e.target[1].value;
-        fetch('http://localhost:3000/login', {
+        fetch('https://chat-express-production.up.railway.app/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             body: new URLSearchParams({ email, password }).toString(),
@@ -48,7 +48,7 @@ const Login = () => {
         const email = e.target[1].value;
         const password = e.target[2].value;
         const confirmPassword = e.target[3].value;
-        fetch('http://localhost:3000/register', {
+        fetch('https://chat-express-production.up.railway.app/register', {
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             body: new URLSearchParams({ name, email, password, confirmPassword }).toString()
